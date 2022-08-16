@@ -1,7 +1,7 @@
 {
-  "name": "zk-app",
+  "name": "zk-otp",
   "version": "1.0.0",
-  "description": "Boilerplate for zkApp",
+  "description": "zkOTP",
   "scripts": {
     "compile:contracts": "npx hardhat compile --force",
     "develop": "npx hardhat node",
@@ -14,31 +14,33 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/socathie/zkApp.git"
+    "url": "https://github.com/socathie/zkOTP.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/socathie/zkApp.git/issues"
+    "url": "https://github.com/socathie/zkOTP.git/issues"
   },
-  "homepage": "https://github.com/socathie/zkApp.git#readme",
+  "homepage": "https://github.com/socathie/zkOTP.git#readme",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
     "chai": "^4.3.6",
     "circom_tester": "^0.0.11",
-    "circomlib": "^2.0.2",
+    "circomlib": "^2.0.5",
     "circomlib-matrix": "^1.0.1",
     "circomlib-ml": "^1.1.0",
-    "circomlibjs": "^0.1.1",
+    "circomlibjs": "^0.1.7",
+    "dotenv": "^16.0.1",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.6.8",
     "hardhat": "^2.9.7",
     "hardhat-contract-sizer": "^2.4.0",
     "hardhat-deploy": "^0.10.4",
     "hardhat-gas-reporter": "^1.0.7",
-    "snarkjs": "^0.4.19",
+    "snarkjs": "^0.4.24",
+    "totp-generator": "^0.0.13",
     "web3-utils": "^1.7.0"
   }
 }
