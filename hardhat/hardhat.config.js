@@ -7,11 +7,6 @@ require("dotenv").config();
 
 const { PRIVATE_KEY } = process.env;
 
-// Replace this private key with your Harmony account private key
-// To export your private key from Metamask, open Metamask and
-// go to Account Details > Export Private Key
-// Be aware of NEVER putting real Ether into testing accounts
-
 module.exports = {
     solidity: {
         version: "0.8.4",

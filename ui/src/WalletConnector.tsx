@@ -2,7 +2,7 @@ import Fab from '@mui/material/Fab';
 import Backdrop from '@mui/material/Backdrop';
 import { useEffect, useState } from 'react';
 
-const testnetChainId = '0x6357d2e0'
+const devnetChainId = '0x635ae020'
 
 export default function WalletConnector() {
   const { ethereum } = window;
@@ -49,18 +49,18 @@ export default function WalletConnector() {
     let chainId = await ethereum.request({ method: 'eth_chainId' });
     console.log("Chain ID:", chainId, parseInt(chainId));
 
-    setCorrectChain(chainId === testnetChainId);
+    setCorrectChain(chainId === devnetChainId);
   }
 
   const changeChainId = async () => {
     let chainId = await ethereum.request({ method: 'eth_chainId' });
 
-    if (chainId !== testnetChainId) {
+    if (chainId !== devnetChainId) {
       try {
         await ethereum.request({
           method: 'wallet_switchEthereumChain',
           params: [{
-            chainId: testnetChainId
+            chainId: devnetChainId
           }], // chainId must be in hexadecimal numbers
         });
         chainId = await ethereum.request({ method: 'eth_chainId' });
@@ -73,15 +73,15 @@ export default function WalletConnector() {
               method: 'wallet_addEthereumChain',
               params: [
                 {
-                  chainId: testnetChainId,
-                  chainName: 'Harmony Testnet',
+                  chainId: devnetChainId,
+                  chainName: 'Harmony Devnet',
                   nativeCurrency: {
                     name: 'ONE',
                     symbol: 'ONE',
                     decimals: 18
                   },
-                  rpcUrls: ['https://api.s0.b.hmny.io'],
-                  blockExplorerUrls: ['https://explorer.pops.one']
+                  rpcUrls: ['https://api.s0.ps.hmny.io/'],
+                  blockExplorerUrls: ['https://explorer.ps.hmny.io']
                 },
               ],
             });
@@ -93,7 +93,7 @@ export default function WalletConnector() {
       }
       window.location.reload();
     }
-    setCorrectChain(chainId === testnetChainId);
+    setCorrectChain(chainId === devnetChainId);
   }
 
   const changeAccount = async () => {
