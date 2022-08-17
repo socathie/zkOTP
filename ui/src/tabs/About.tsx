@@ -22,7 +22,7 @@ export default function About() {
 
   ## Using the app
 
-  The verifier and factory contracts are currently deployed on [Harmony devnet](https://docs.harmony.one/home/developers/network-and-faucets). Visit https://zk-opt.netlify.app to try it out.
+  The verifier and factory contracts are currently deployed on [Harmony devnet](https://docs.harmony.one/home/developers/network-and-faucets). Visit https://zk-otp.netlify.app to try it out.
 
 
   * "Deploy" tab: Click the "DEPLOY" button will generate a new OTP contract with a randomly generated seed. After the contract is deployed, the contract address, the seed, and a QR code will be displayed on screen. Make sure to import into your Google Authenticator app, otherwise you will have to pay the gas fee to deploy a new contract.
