@@ -50,7 +50,7 @@ export async function naiveProof(input: Object) {
         console.log(localStorage.getItem('OTPaddress'));
         await connectContract(localStorage.getItem('OTPaddress')!);
     } else {
-        throw "No OTP contract address found. Deploy first."
+        throw new Error("No OTP contract address found. Deploy first.");
     }
 
     let calldata = await generateCalldata(input);
@@ -71,7 +71,7 @@ export async function naiveProof(input: Object) {
                 throw errorMsg;
             });
     } else {
-        throw "Witness generation failed.";
+        throw new Error("Witness generation failed.");
     }
     return tx;
 }
@@ -82,7 +82,7 @@ export async function blockTimestampProof(input: Object) {
         console.log(localStorage.getItem('OTPaddress'));
         await connectContract(localStorage.getItem('OTPaddress')!);
     } else {
-        throw "No OTP contract address found. Deploy first."
+        throw new Error("No OTP contract address found. Deploy first.");
     }
 
     let calldata = await generateCalldata(input);
@@ -103,7 +103,7 @@ export async function blockTimestampProof(input: Object) {
                 throw errorMsg;
             });
     } else {
-        throw "Witness generation failed.";
+        throw new Error("Witness generation failed.");
     }
     return tx;
 }

@@ -65,7 +65,7 @@ export async function generateInput(otp) {
     //console.log(currentNode);
 
     if (hashes.indexOf(currentNode) < 0) {
-        throw "Invalid OTP."
+        throw new Error("Invalid OTP.");
     }
 
     let pathElements = [];
