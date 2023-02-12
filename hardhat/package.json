@@ -25,7 +25,7 @@
   "homepage": "https://github.com/socathie/zkOTP.git#readme",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
-    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.5",
     "chai": "^4.3.6",
     "circom_tester": "^0.0.11",
     "circomlib": "^2.0.5",
@@ -33,7 +33,7 @@
     "circomlib-ml": "^1.1.0",
     "circomlibjs": "^0.1.7",
     "dotenv": "^16.0.1",
-    "ethereum-waffle": "^3.4.4",
+    "ethereum-waffle": "^4.0.9",
     "ethers": "^5.6.8",
     "hardhat": "^2.9.7",
     "hardhat-contract-sizer": "^2.4.0",
